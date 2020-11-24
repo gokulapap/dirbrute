@@ -6,9 +6,10 @@ path = input("Enter path of payloads: ")
 
 file = open(path, "r")
 
-for i in range(15):
+while(1):
 	a = file.readline()
-	
+	if a == '\n':
+		break
 	r = requests.get(url+a)
 	s = r.status_code
 
